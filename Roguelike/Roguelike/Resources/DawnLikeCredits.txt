@@ -1,0 +1,4 @@
+Website:
+http://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181
+
+We really like these textures, they are perfect for use as placeholders in our project. We hope to develop our own later. But for the time being. we will use these as our base.

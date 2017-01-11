@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DC8E3EE3-4D06-4E8D-BE73-4CFA3E79C2D9}</ProjectGuid>
+    <RootNamespace>Roguelike</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Utilities\FileReaders\IniFileReader.h" />
+    <ClInclude Include="Utilities\Utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\DawnLike - README.txt" />
+    <Text Include="Resources\DawnLikeCredits.txt" />
+    <Text Include="Resources\Maps\MainMenu.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Characters\Aquatic0.png" />
+    <Image Include="Resources\Characters\Aquatic1.png" />
+    <Image Include="Resources\Characters\Avian0.png" />
+    <Image Include="Resources\Characters\Avian1.png" />
+    <Image Include="Resources\Characters\Cat0.png" />
+    <Image Include="Resources\Characters\Cat1.png" />
+    <Image Include="Resources\Characters\Demon0.png" />
+    <Image Include="Resources\Characters\Demon1.png" />
+    <Image Include="Resources\Characters\Dog0.png" />
+    <Image Include="Resources\Characters\Dog1.png" />
+    <Image Include="Resources\Characters\Elemental0.png" />
+    <Image Include="Resources\Characters\Elemental1.png" />
+    <Image Include="Resources\Characters\Humanoid0.png" />
+    <Image Include="Resources\Characters\Humanoid1.png" />
+    <Image Include="Resources\Characters\Misc0.png" />
+    <Image Include="Resources\Characters\Misc1.png" />
+    <Image Include="Resources\Characters\Pest0.png" />
+    <Image Include="Resources\Characters\Pest1.png" />
+    <Image Include="Resources\Characters\Plant0.png" />
+    <Image Include="Resources\Characters\Plant1.png" />
+    <Image Include="Resources\Characters\Player0.png" />
+    <Image Include="Resources\Characters\Player1.png" />
+    <Image Include="Resources\Characters\Quadraped0.png" />
+    <Image Include="Resources\Characters\Quadraped1.png" />
+    <Image Include="Resources\Characters\Reptile0.png" />
+    <Image Include="Resources\Characters\Reptile1.png" />
+    <Image Include="Resources\Characters\Rodent0.png" />
+    <Image Include="Resources\Characters\Rodent1.png" />
+    <Image Include="Resources\Characters\Slime0.png" />
+    <Image Include="Resources\Characters\Slime1.png" />
+    <Image Include="Resources\Characters\Undead0.png" />
+    <Image Include="Resources\Characters\Undead1.png" />
+    <Image Include="Resources\DawnLikeCredits.png" />
+    <Image Include="Resources\GUI\GUI0.png" />
+    <Image Include="Resources\GUI\GUI1.png" />
+    <Image Include="Resources\Items\Ammo.png" />
+    <Image Include="Resources\Items\Amulet.png" />
+    <Image Include="Resources\Items\Armor.png" />
+    <Image Include="Resources\Items\Book.png" />
+    <Image Include="Resources\Items\Boot.png" />
+    <Image Include="Resources\Items\Chest0.png" />
+    <Image Include="Resources\Items\Chest1.png" />
+    <Image Include="Resources\Items\Flesh.png" />
+    <Image Include="Resources\Items\Food.png" />
+    <Image Include="Resources\Items\Glove.png" />
+    <Image Include="Resources\Items\Hat.png" />
+    <Image Include="Resources\Items\Key.png" />
+    <Image Include="Resources\Items\Light.png" />
+    <Image Include="Resources\Items\LongWep.png" />
+    <Image Include="Resources\Items\MedWep.png" />
+    <Image Include="Resources\Items\Money.png" />
+    <Image Include="Resources\Items\Music.png" />
+    <Image Include="Resources\Items\Potion.png" />
+    <Image Include="Resources\Items\Ring.png" />
+    <Image Include="Resources\Items\Rock.png" />
+    <Image Include="Resources\Items\Scroll.png" />
+    <Image Include="Resources\Items\Shield.png" />
+    <Image Include="Resources\Items\ShortWep.png" />
+    <Image Include="Resources\Items\Tool.png" />
+    <Image Include="Resources\Items\Wand.png" />
+    <Image Include="Resources\Objects\Decor0.png" />
+    <Image Include="Resources\Objects\Decor1.png" />
+    <Image Include="Resources\Objects\Door0.png" />
+    <Image Include="Resources\Objects\Door1.png" />
+    <Image Include="Resources\Objects\Effect0.png" />
+    <Image Include="Resources\Objects\Effect1.png" />
+    <Image Include="Resources\Objects\Fence.png" />
+    <Image Include="Resources\Objects\Floor.png" />
+    <Image Include="Resources\Objects\Ground0.png" />
+    <Image Include="Resources\Objects\Ground1.png" />
+    <Image Include="Resources\Objects\Hill0.png" />
+    <Image Include="Resources\Objects\Hill1.png" />
+    <Image Include="Resources\Objects\Map0.png" />
+    <Image Include="Resources\Objects\Map1.png" />
+    <Image Include="Resources\Objects\Ore0.png" />
+    <Image Include="Resources\Objects\Ore1.png" />
+    <Image Include="Resources\Objects\Pit0.png" />
+    <Image Include="Resources\Objects\Pit1.png" />
+    <Image Include="Resources\Objects\Tile.png" />
+    <Image Include="Resources\Objects\Trap0.png" />
+    <Image Include="Resources\Objects\Trap1.png" />
+    <Image Include="Resources\Objects\Tree0.png" />
+    <Image Include="Resources\Objects\Tree1.png" />
+    <Image Include="Resources\Objects\Wall.png" />
+    <Image Include="Resources\SFMLCredits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maps\MainMenu.Ini" />
+    <None Include="Resources\Settings.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\GUI\SDS_6x6.ttf" />
+    <Font Include="Resources\GUI\SDS_8x8.ttf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

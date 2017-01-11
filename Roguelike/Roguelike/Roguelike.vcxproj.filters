@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{df4c96f9-7fe0-493d-b62a-4bd8900c0738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\FileReaders">
+      <UniqueIdentifier>{d4ccb371-2301-440e-8906-1e6c7ee7a068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{171795b7-1aae-43c8-84b8-fbd3f39948f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Maps">
+      <UniqueIdentifier>{be0d2091-8741-4805-8805-f177885f5770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Characters">
+      <UniqueIdentifier>{2f1041b8-3edf-47d2-9eab-393b956f5512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\GUI">
+      <UniqueIdentifier>{175e885a-7266-497c-aba2-83fe9548fff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Items">
+      <UniqueIdentifier>{d8cea0fc-c0ae-47cd-88d9-2b0aaa57f383}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Objects">
+      <UniqueIdentifier>{69cca2ed-29aa-44d6-9c3b-79572bc5ba29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utilities\Utilities.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\FileReaders\IniFileReader.h">
+      <Filter>Utilities\FileReaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp">
+      <Filter>Utilities\FileReaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\DawnLike - README.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="Resources\DawnLikeCredits.txt">
+      <Filter>Resources</Filter>
+    </Text>
+    <Text Include="Resources\Maps\MainMenu.txt">
+      <Filter>Resources\Maps</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\DawnLikeCredits.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\SFMLCredits.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Door0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Door1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Effect0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Effect1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Fence.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Floor.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Ground0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Ground1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Hill0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Hill1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Map0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Map1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Ore0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Ore1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Pit0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Pit1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Tile.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Trap0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Trap1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Tree0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Tree1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Wall.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Decor0.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Objects\Decor1.png">
+      <Filter>Resources\Objects</Filter>
+    </Image>
+    <Image Include="Resources\Items\Ammo.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Amulet.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Armor.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Book.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Boot.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Chest0.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Chest1.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Flesh.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Food.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Glove.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Hat.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Key.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Light.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\LongWep.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\MedWep.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Money.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Music.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Potion.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Ring.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Rock.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Scroll.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Shield.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\ShortWep.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Tool.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\Items\Wand.png">
+      <Filter>Resources\Items</Filter>
+    </Image>
+    <Image Include="Resources\GUI\GUI0.png">
+      <Filter>Resources\GUI</Filter>
+    </Image>
+    <Image Include="Resources\GUI\GUI1.png">
+      <Filter>Resources\GUI</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Aquatic0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Aquatic1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Avian0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Avian1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Cat0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Cat1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Demon0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Demon1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Dog0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Dog1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Elemental0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Elemental1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Humanoid0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Humanoid1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Misc0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Misc1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Pest0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Pest1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Plant0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Plant1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Player0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Player1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Quadraped0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Quadraped1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Reptile0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Reptile1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Rodent0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Rodent1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Slime0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Slime1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Undead0.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+    <Image Include="Resources\Characters\Undead1.png">
+      <Filter>Resources\Characters</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.ini">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="Resources\Maps\MainMenu.Ini">
+      <Filter>Resources\Maps</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\GUI\SDS_6x6.ttf">
+      <Filter>Resources\GUI</Filter>
+    </Font>
+    <Font Include="Resources\GUI\SDS_8x8.ttf">
+      <Filter>Resources\GUI</Filter>
+    </Font>
+  </ItemGroup>
+</Project>
