@@ -33,12 +33,17 @@
     <ClInclude Include="Utilities\FileReaders\IniFileReader.h">
       <Filter>Utilities\FileReaders</Filter>
     </ClInclude>
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp">
       <Filter>Utilities\FileReaders</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Resources\DawnLike - README.txt">
