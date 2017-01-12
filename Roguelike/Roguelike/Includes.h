@@ -2,8 +2,6 @@
 #define _INCLUDES_H_
 //
 
-#include <iostream>
-
 #pragma region [ SFML Includes... ]
 //
 	#ifndef SFML_SYSTEM_HPP
@@ -31,12 +29,6 @@
 	#endif // !SFML_GRAPHICS_HPP
 //
 #pragma endregion
-
-#include "Settings.h"
-#include "Utilities\Utilities.h"
-
-
-#include "Game.h"
 
 //
 #endif // !_INCLUDES_H_

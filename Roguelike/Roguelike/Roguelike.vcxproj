@@ -132,14 +132,19 @@
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="Includes.h" />
+    <ClInclude Include="Scenes\SceneBase.h" />
     <ClInclude Include="Settings.h" />
+    <ClInclude Include="Systems\Camera.h" />
+    <ClInclude Include="Systems\SceneManager.h" />
     <ClInclude Include="Utilities\FileReaders\IniFileReader.h" />
-    <ClInclude Include="Utilities\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Scenes\SceneBase.cpp" />
     <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Systems\Camera.cpp" />
+    <ClCompile Include="Systems\SceneManager.cpp" />
     <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp" />
   </ItemGroup>
   <ItemGroup>

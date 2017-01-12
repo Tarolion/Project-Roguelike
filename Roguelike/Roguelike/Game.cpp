@@ -2,6 +2,7 @@
 
 Game::Game()
 {
+	InitializeSystems();
 }
 
 Game::~Game()
@@ -9,11 +10,16 @@ Game::~Game()
 	window = nullptr;
 }
 
+void Game::InitializeSystems()
+{
+	sceneManager = new SceneManager();
+	sceneManager->AddScene(new SceneBase());
+}
+
 void Game::GameLoop()
 {
 	// Create a new Window
 	window = new sf::RenderWindow(sf::VideoMode(Settings::WindowWidth, Settings::WindowHeight), "");
-
 	running = true;
 
 	// Now wait for the window to close...
@@ -26,10 +32,16 @@ void Game::GameLoop()
 			{
 				window->close();
 			}
+			else
+			{
+				sceneManager->Process(ev);
+			}
 		}
 
-		window->clear();
+		sceneManager->Update();
 
+		window->clear();
+		sceneManager->Draw(window);
 		window->display();
 	}
 

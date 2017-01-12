@@ -45,12 +45,12 @@ private:
 	{
 	public:
 		std::string name;
-		std::vector<IniKey> keys;
+		std::vector<IniKey*> keys;
 	};
 	
 	const char* path;
 
-	std::vector<IniSection> _sections;
+	std::vector<IniSection*> _sections;
 	std::vector<std::string> _lines;
 
 	void Initialize();		// Clears all sections and lines vectors.

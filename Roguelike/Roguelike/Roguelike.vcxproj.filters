@@ -25,17 +25,29 @@
     <Filter Include="Resources\Objects">
       <UniqueIdentifier>{69cca2ed-29aa-44d6-9c3b-79572bc5ba29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{64dc98bf-8747-45c7-bad6-98ce67537b25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scenes">
+      <UniqueIdentifier>{28b83127-6168-4608-bf49-2fcb8b954d33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Utilities\Utilities.h">
-      <Filter>Utilities</Filter>
-    </ClInclude>
     <ClInclude Include="Utilities\FileReaders\IniFileReader.h">
       <Filter>Utilities\FileReaders</Filter>
     </ClInclude>
     <ClInclude Include="Includes.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Systems\SceneManager.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\Camera.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes\SceneBase.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp">
@@ -44,6 +56,15 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Systems\SceneManager.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\Camera.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\SceneBase.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Resources\DawnLike - README.txt">

@@ -1,4 +1,8 @@
+#include <iostream>
+
+#include "Settings.h"
 #include "Includes.h"
+#include "Game.h"
 
 int main()
 {

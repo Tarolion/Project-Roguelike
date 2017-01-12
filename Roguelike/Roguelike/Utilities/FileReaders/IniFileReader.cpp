@@ -4,10 +4,8 @@
 
 IniFileReader::IniFileReader()
 {
-	_lines.clear();
-	_sections.clear();
+	Initialize();
 }
-
 IniFileReader::~IniFileReader()
 {
 	_lines.clear();
@@ -21,9 +19,9 @@ void IniFileReader::Initialize()
 }
 bool IniFileReader::ParseLines()
 {
-	IniSection lastSection;
-	lastSection.name = "#unnamed#";
-	lastSection.keys.clear();
+	IniSection* lastSection = new IniSection();
+	lastSection->name = "#unnamed#";
+	lastSection->keys.clear();
 
 	std::size_t pos = 0;
 
@@ -41,15 +39,15 @@ bool IniFileReader::ParseLines()
 		if (!(pos > line.length()))
 		{
 			// Add last Section to sections.
-			if (lastSection.name != "#unnamed#")
+			if (lastSection->name != "#unnamed#")
 			{
 				_sections.push_back(lastSection);
 			}
 
 			// Create new temp section
-			IniSection section;
-			section.name = line.substr(pos+1, line.length() - 2);
-			section.keys.clear();
+			IniSection* section = new IniSection();
+			section->name = line.substr(pos+1, line.length() - 2);
+			section->keys.clear();
 
 			lastSection = section;
 		}
@@ -59,21 +57,21 @@ bool IniFileReader::ParseLines()
 		if (!(pos > line.length()))
 		{
 			// Create Key
-			IniKey key;
+			IniKey* key = new IniKey();
 
 			// Get Name and value
-			key.name	= line.substr(0, pos);
-			key.value	= line.substr(pos + 1);
+			key->name	= line.substr(0, pos);
+			key->value	= line.substr(pos + 1);
 			
 			// Add key to last Section
-			if (lastSection.name != "#unnamed#")
+			if (lastSection->name != "#unnamed#")
 			{
-				lastSection.keys.push_back(key);
+				lastSection->keys.push_back(key);
 			}
 		}
 	}
 
-	if (lastSection.name != "#unnamed#")
+	if (lastSection->name != "#unnamed#")
 	{
 		_sections.push_back(lastSection);
 	}
@@ -105,26 +103,45 @@ bool IniFileReader::ReadFile(const char* p)
 	}
 	else return false;
 
-	return ParseLines();
+	ParseLines();
+	return true;
 }
 
 bool IniFileReader::SaveFile()
 {
-	// TODO
+	std::ofstream stream;
+	stream.open(path, std::fstream::out | std::fstream::trunc);
+
+	if (stream.is_open())
+	{
+		for (IniSection* s : _sections)
+		{
+			stream << "[" << s->name << "]" << std::endl;
+
+			for (IniKey* k : s->keys)
+			{
+				stream << k->name << ":" << k->value << std::endl;
+			}
+		}
+
+		stream.close();
+	}
+	else return false;
+
 	return false;
 }
 
 std::string IniFileReader::GetData(std::string sectionName, std::string keyName)
 {
-	for (IniSection s : _sections)
+	for (IniSection* s : _sections)
 	{
-		if (s.name == sectionName)
+		if (s->name == sectionName)
 		{
-			for (IniKey k : s.keys)
+			for (IniKey* k : s->keys)
 			{
-				if (k.name == keyName)
+				if (k->name == keyName)
 				{
-					return k.value;
+					return k->value;
 				}
 			}
 		}
@@ -135,21 +152,41 @@ std::string IniFileReader::GetData(std::string sectionName, std::string keyName)
 
 bool IniFileReader::SetData(std::string sectionName, std::string keyName, std::string value)
 {
-	for (IniSection s : _sections)
+	for (IniSection* s : _sections)
 	{
-		if (s.name == sectionName)
+		if (s->name == sectionName)
 		{
-			for (IniKey k : s.keys)
+			for (IniKey* k : s->keys)
 			{
-				if (k.name == keyName)
+				if (k->name == keyName)	// Found both Section and key.
 				{
-					k.value = value;
+					k->value = value;
 					return true;
 				}
 			}
+
+			// Found Section, but not the Key
+			IniKey* key = new IniKey();
+			key->name = keyName;
+			key->value = value;
+
+			s->keys.push_back(key);
+			SaveFile();
+			return true;
 		}
 	}
 
+	// found Neither section nor key.
+	IniKey* key = new IniKey();
+	key->name = keyName;
+	key->value = value;
+
+	IniSection* section = new IniSection();
+	section->name = sectionName;
+	section->keys.push_back(key);
+
+	_sections.push_back(section);
+	SaveFile();
 	return false;
 }
 
