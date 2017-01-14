@@ -48,6 +48,12 @@
     <ClInclude Include="Scenes\SceneBase.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Scenes\OpeningCreditsScene.h">
+      <Filter>Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Systems\TextureAtlas.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Utilities\FileReaders\IniFileReader.cpp">
@@ -64,6 +70,12 @@
     </ClCompile>
     <ClCompile Include="Scenes\SceneBase.cpp">
       <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes\OpeningCreditsScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Systems\TextureAtlas.cpp">
+      <Filter>Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

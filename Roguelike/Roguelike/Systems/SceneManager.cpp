@@ -21,7 +21,12 @@ SceneBase* SceneManager::GetCurrentScene()
 
 void SceneManager::ChangeScene(unsigned int scene)
 {
-
+	if (scene < scenes.size())
+	{
+		scenes[currentScene]->Deactivate();
+		currentScene = scene;
+		scenes[currentScene]->Activate();
+	}
 }
 
 void SceneManager::AddScene(SceneBase * scene)

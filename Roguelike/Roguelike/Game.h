@@ -2,8 +2,11 @@
 #define _GAME_H_
 //
 #include "Includes.h"
+
 #include "Systems\SceneManager.h"
+
 #include "Scenes\SceneBase.h"
+#include "Scenes\OpeningCreditsScene.h"
 
 class Game
 {

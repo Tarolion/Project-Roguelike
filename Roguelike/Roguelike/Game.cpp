@@ -13,7 +13,7 @@ Game::~Game()
 void Game::InitializeSystems()
 {
 	sceneManager = new SceneManager();
-	sceneManager->AddScene(new SceneBase());
+	sceneManager->AddScene(new OpeningCreditsScene());
 }
 
 void Game::GameLoop()
